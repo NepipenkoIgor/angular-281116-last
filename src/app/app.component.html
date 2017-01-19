@@ -1,3 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<a [routerLink]="['']" class="home">Home</a>
+
+<a [routerLink]="[{outlets:{primary:'home',aux1:'chat1'}}]" class="chat1">Open Chat 1</a>
+<a [routerLink]="[{outlets:{primary:'home',aux2:'chat2'}}]" class="chat2">Open Chat 2</a>
+
+<a [routerLink]="['lazy']" class="lazy">Lazy</a>
+<a [routerLink]="['profile']" class="profile">Profile</a>
+
+
+<router-outlet></router-outlet>
+<router-outlet name="aux1"></router-outlet>
+<router-outlet name="aux2"></router-outlet>
